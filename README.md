@@ -1,24 +1,67 @@
 # vue-element-loading
 
-> Vue loading component
+⏳ Loading inside a container component for Vue.js (WIP 🚧)
 
-## Build Setup
+# 👀 Document & Demo Page
 
-``` bash
-# install dependencies
-npm install
+[COMMING SOON](...)
 
-# serve with hot reload at localhost:8080
-npm run dev
+# 💻 Install
 
-# build your demo page for production
-npm run build:example
-
-# pack your component/library with bili for publishing to npm
-npm run build
-
-# publishing your component/library to npm (Check your version first before publish.)
-npm publish
+```sh
+npm install --save vue-element-loading
+```
+or
+```sh
+yarn add vue-element-loading
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+# 🕹 Usage
+```javascript
+import Vue from 'vue'
+import ElementLoading from 'vue-element-loading'
+
+Vue.component('ElementLoading', ElementLoading)
+```
+or
+```javascript
+import ElementLoading from 'vue-element-loading'
+
+export default {
+  components: {
+    ElementLoading
+  }
+}
+```
+
+# 🔎 Example
+
+```html
+Comming soon ...
+```
+
+# ⚙️ Props
+| Props       | Type          | Default  | Description  |
+| ----------- |:--------------| ---------|--------------|
+| xxxxxxxx    | xxxxxx        | -        | xxxxxxxxxxxx |
+
+# 🤝 Contributing
+1. Fork this repository.
+2. Create new branch with feature name.
+3. Run `npm install` and `npm run dev`.
+4. Create your feature.
+5. Commit and set commit message with feature name.
+6. Push your code to your fork repository.
+7. Create pull request. 🙂
+
+# ⭐️ Support
+
+If you like this project, You can support me with starring ⭐ this repository.
+
+Or buy a coffee for me at `Ethereum` wallet: [0xde3ce563d80a671992622a408327cb7727173328](https://etherscan.io/address/0xde3ce563d80a671992622a408327cb7727173328)
+
+# 📄 License
+
+[MIT](LICENSE)
+
+Developed with ❤️ and ☕️ 
