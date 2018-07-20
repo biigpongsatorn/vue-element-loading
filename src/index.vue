@@ -4,6 +4,10 @@
 </template>
 
 <script>
+
+/**
+ * Loading inside a container component for Vue.js
+ */
 export default {
   name: 'vue-element-loading'
 }
