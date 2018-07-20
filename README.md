@@ -58,7 +58,7 @@ Comming soon ...
 
 If you like this project, You can support me with starring ⭐ this repository.
 
-Or buy a coffee for me at `Ethereum` wallet: [0xde3ce563d80a671992622a408327cb7727173328](https://etherscan.io/address/0xde3ce563d80a671992622a408327cb7727173328)
+Buy me a coffee at `Ethereum` wallet: [0xde3ce563d80a671992622a408327cb7727173328](https://etherscan.io/address/0xde3ce563d80a671992622a408327cb7727173328)
 
 # 📄 License
 
