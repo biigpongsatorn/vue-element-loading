@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
     <div v-show="isActive" ref="velmld"  class="velmld-overlay" :class="{ 'velmld-full-screen': isFullScreen }">
-      <component class="velmld-spinner" :is="spinnerSelected"></component>
+      <component class="velmld-spinner" :is="spinner" :color="spinnerColor"></component>
     </div>
   </transition>
 </template>
@@ -17,6 +17,7 @@ export default {
       type: String,
       default: 'spinner'
     },
+    color: String,
     isFullScreen: {
       type: Boolean,
       default: false
@@ -25,15 +26,18 @@ export default {
   data () {
     return {
       isActive: this.active || false,
-      spinnerSelected: this.spinner || 'spinner'
+      spinnerColor: this.color
     }
   },
+  /**
+   * Append class 'velmld-parent' to parent container.
+   */
   mounted () {
     this.$refs.velmld.parentNode.classList.add('velmld-parent')
   },
   watch: {
     /**
-     * Binding outside component value with inside component value.
+     * Binding outside component value and inside component value.
      * Append class 'velmld-parent' to parent container.
      */
     active (value) {
@@ -43,10 +47,10 @@ export default {
       }
     },
     /**
-     * Binding outside component value with inside component value.
+     * Binding outside component color value and inside component color value.
      */
-    spinner (value) {
-      this.spinnerSelected = value
+    color (value) {
+      this.spinnerColor = value
     }
   },
   components: Loaders

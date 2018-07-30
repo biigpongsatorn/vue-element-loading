@@ -1,7 +1,8 @@
 <template>
   <div>
     <div id="app">
-      <VueElementLoading :active="show" :is-full-screen="false" spinner="bar-fade-scale"/>
+      <!-- <VueElementLoading :active="show" :is-full-screen="false" spinner="bar-fade"/> -->
+      <VueElementLoading :active="show" spinner="bar-fade-scale" color="#FF6700"/>
       <span>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis,
         nibh id hendrerit imperdiet, elit sapien laoreet elit
@@ -25,6 +26,7 @@
 
 <script>
 import VueElementLoading from '../src'
+// import VueElementLoading from '../lib/vue-element-loading.min.js'
 
 export default {
   name: 'app',
