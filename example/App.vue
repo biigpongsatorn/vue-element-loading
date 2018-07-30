@@ -1,7 +1,6 @@
 <template>
   <div>
     <div id="app">
-      <!-- <VueElementLoading :active="show" :is-full-screen="false" spinner="bar-fade"/> -->
       <VueElementLoading :active="show" spinner="bar-fade-scale" color="#FF6700"/>
       <span>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis,
