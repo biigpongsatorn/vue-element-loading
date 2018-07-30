@@ -1,6 +1,6 @@
 {
   "name": "vue-element-loading",
-  "description": "Vue loading component",
+  "description": "Loading inside a container or full screen for Vue.js",
   "version": "1.0.0",
   "author": "biig_pongsatorn <biig_pongsatorn@hotmail.com>",
   "license": "MIT",

@@ -1,10 +1,10 @@
 # vue-element-loading
 
-⏳ Loading inside a container or full screen component for Vue.js
+⏳ Loading inside a container or full screen for Vue.js
 
 # 👀 Document & Demo Page
 
-[COMMING SOON](...)
+[Docs & Live demo](https://biigpongsatorn.github.io/#/vue-element-loading)
 
 # 💻 Install
 
@@ -25,11 +25,11 @@ Vue.component('ElementLoading', ElementLoading)
 ```
 or
 ```javascript
-import ElementLoading from 'vue-element-loading'
+import VueElementLoading from 'vue-element-loading'
 
 export default {
   components: {
-    ElementLoading
+    VueElementLoading
   }
 }
 ```
@@ -37,13 +37,16 @@ export default {
 # 🔎 Example
 
 ```html
-Comming soon ...
+<vue-element-loading :active="show" spinner="spinner" color="#FF6700"/>
 ```
 
 # ⚙️ Props
 | Props       | Type          | Default  | Description  |
 | ----------- |:--------------| ---------|--------------|
-| xxxxxxxx    | xxxxxx        | -        | xxxxxxxxxxxx |
+| active      | Boolean       | -        | Status for show/hide loading |
+| spinner    | String        | spinner        | Spinner icon name |
+| color    | String        | #ccc        | Color of spinner icon |
+| is-full-screen    | Boolean        | false        | Loader will overlay the full page |
 
 # 🤝 Contributing
 1. Fork this repository.
