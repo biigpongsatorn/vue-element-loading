@@ -37,7 +37,12 @@ export default {
 # 🔎 Example
 
 ```html
-<vue-element-loading :active="show" spinner="spinner" color="#FF6700"/>
+<div>
+  <vue-element-loading :active="show" spinner="spinner" color="#FF6700"/>
+  <span>
+    This is my content.
+  </span>
+</div>
 ```
 
 # ⚙️ Props
