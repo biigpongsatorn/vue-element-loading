@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div v-if="active" class="velmld-overlay">
+    <div v-show="isActive" ref="velmld"  class="velmld-overlay" :class="{ 'velmld-full-screen': isFullScreen }">
       <spinner class="velmld-spinner"/>
     </div>
   </transition>
@@ -21,6 +21,26 @@ export default {
     isFullScreen: {
       type: Boolean,
       default: true
+    }
+  },
+  data () {
+    return {
+      isActive: this.active || false
+    }
+  },
+  mounted () {
+    this.$refs.velmld.parentNode.classList.add('velmld-parent')
+  },
+  watch: {
+    /**
+     * Binding outside component value with inside component value.
+     * Append class 'velmld-parent' to parent container.
+     */
+    active (value) {
+      this.isActive = value
+      if (value) {
+        this.$refs.velmld.parentNode.classList.add('velmld-parent')
+      }
     }
   },
   components: { Spinner }
@@ -50,5 +70,14 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
+}
+.velmld-full-screen {
+  position: fixed;
+}
+</style>
+
+<style>
+.velmld-parent {
+  position: relative !important;
 }
 </style>

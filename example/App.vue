@@ -33,6 +33,9 @@ export default {
       show: true
     }
   },
+  created () {
+    setTimeout(() => { this.show = false }, 4000)
+  },
   components: { VueElementLoading }
 }
 </script>
