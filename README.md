@@ -56,7 +56,7 @@ export default {
 | Props       | Type          | Default  | Description  |
 | ----------- |:--------------| ---------|--------------|
 | active      | Boolean       | -        | Status for show/hide loading |
-| spinner    | String        | spinner        | Spinner icon name |
+| spinner    | String        | spinner   | Spinner icon name: `spinner`, `mini-spinner`, `ring`, `line-wave`, `line-scale`, `line-down`, `bar-fade`, `bar-fade-scale` |
 | color    | String        | #ccc        | Color of spinner icon |
 | is-full-screen    | Boolean        | false        | Loader will overlay the full page |
 
