@@ -1,17 +1,51 @@
 <template>
-  <div id="app">
-    <MyComponent/>
+  <div>
+    <div id="app">
+      <VueElementLoading :active="show" :is-full-screen="true"/>
+      <span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis,
+        nibh id hendrerit imperdiet, elit sapien laoreet elit
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis,
+        nibh id hendrerit imperdiet, elit sapien laoreet elit
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis,
+        nibh id hendrerit imperdiet, elit sapien laoreet elit
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis,
+        nibh id hendrerit imperdiet, elit sapien laoreet elit
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis,
+        nibh id hendrerit imperdiet, elit sapien laoreet elit
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis,
+        nibh id hendrerit imperdiet, elit sapien laoreet elit
+      </span>
+    </div>
+    <div class="btn-toggle">
+      <button @click="show = !show">Toggle</button>
+    </div>
   </div>
 </template>
 
 <script>
-import MyComponent from '../src'
+import VueElementLoading from '../src'
 
 export default {
   name: 'app',
-  components: { MyComponent }
+  data () {
+    return {
+      show: true
+    }
+  },
+  components: { VueElementLoading }
 }
 </script>
 
 <style scoped>
+#app {
+  float: left;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #ccc;
+}
+.btn-toggle {
+  float: left;
+  margin: 20px;
+}
 </style>

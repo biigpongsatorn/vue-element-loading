@@ -1,6 +1,6 @@
 # vue-element-loading
 
-⏳ Loading inside a container component for Vue.js (WIP 🚧)
+⏳ Loading inside a container component for Vue.js
 
 # 👀 Document & Demo Page
 
