@@ -13,14 +13,13 @@ export default {
   name: 'vue-element-loading',
   props: {
     active: Boolean,
-    container: [Object, Function, HTMLElement],
     spinner: {
       type: String,
       default: 'spinner'
     },
     isFullScreen: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   data () {

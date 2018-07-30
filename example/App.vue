@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="app">
-      <VueElementLoading :active="show" :is-full-screen="true"/>
+      <VueElementLoading :active="show" :is-full-screen="false"/>
       <span>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis,
         nibh id hendrerit imperdiet, elit sapien laoreet elit

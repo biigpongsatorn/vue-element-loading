@@ -1,6 +1,6 @@
 # vue-element-loading
 
-⏳ Loading inside a container component for Vue.js
+⏳ Loading inside a container or full screen component for Vue.js
 
 # 👀 Document & Demo Page
 
