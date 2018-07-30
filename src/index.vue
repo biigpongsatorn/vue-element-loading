@@ -1,13 +1,13 @@
 <template>
   <transition name="fade">
     <div v-show="isActive" ref="velmld"  class="velmld-overlay" :class="{ 'velmld-full-screen': isFullScreen }">
-      <spinner class="velmld-spinner"/>
+      <component class="velmld-spinner" :is="spinner"></component>
     </div>
   </transition>
 </template>
 
 <script>
-import Spinner from './loaders/spinner'
+import Loaders from './loaders'
 
 export default {
   name: 'vue-element-loading',
@@ -42,7 +42,7 @@ export default {
       }
     }
   },
-  components: { Spinner }
+  components: Loaders
 }
 </script>
 
