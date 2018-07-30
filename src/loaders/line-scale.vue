@@ -29,6 +29,6 @@
 
 <script>
 export default {
-  name: 'spinner6'
+  name: 'line-scale'
 }
 </script>

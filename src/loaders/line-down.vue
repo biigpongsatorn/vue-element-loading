@@ -24,6 +24,6 @@
 
 <script>
 export default {
-  name: 'spinner4'
+  name: 'line-down'
 }
 </script>

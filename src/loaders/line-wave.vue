@@ -23,6 +23,6 @@
 
 <script>
 export default {
-  name: 'spinner5'
+  name: 'line-wave'
 }
 </script>

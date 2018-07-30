@@ -20,6 +20,6 @@
 
 <script>
 export default {
-  name: 'spinner8'
+  name: 'bar-fade-scale'
 }
 </script>
