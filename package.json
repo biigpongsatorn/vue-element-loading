@@ -1,13 +1,17 @@
 {
   "name": "vue-element-loading",
   "description": "Loading inside a container or full screen for Vue.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "biig_pongsatorn <biig_pongsatorn@hotmail.com>",
   "license": "MIT",
   "main": "lib/vue-element-loading.min.js",
   "files": [
     "lib"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biigpongsatorn/vue-element-loading.git"
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build:lib": "rm -rf ./lib && bili src/index.vue",
