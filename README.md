@@ -52,6 +52,10 @@ export default {
 </div>
 ```
 
+# 🌀 Spinner
+
+<img src="https://raw.githubusercontent.com/biigpongsatorn/vue-element-loading/HEAD/static/spinner.png">
+
 # ⚙️ Props
 | Props       | Type          | Default  | Description  |
 | ----------- |:--------------| ---------|--------------|
