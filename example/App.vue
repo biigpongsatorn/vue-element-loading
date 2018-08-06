@@ -1,7 +1,11 @@
 <template>
   <div>
     <div id="app">
+      <VueElementLoading :active="fullscreen" is-full-screen/>
       <VueElementLoading :active="show" spinner="bar-fade-scale" color="#FF6700"/>
+      <VueElementLoading :active="pikachu" spinner="bar-fade-scale" color="#FF6700">
+        <img src="https://i.pinimg.com/originals/9f/b1/25/9fb125f1fedc8cc62ab5b20699ebd87d.gif" width="55px" height="55px">
+      </VueElementLoading>
       <span>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis,
         nibh id hendrerit imperdiet, elit sapien laoreet elit
@@ -18,7 +22,13 @@
       </span>
     </div>
     <div class="btn-toggle">
-      <button @click="show = !show">Toggle</button>
+      <button @click="show = !show">Toggle (Inside Container)</button>
+    </div>
+    <div class="btn-toggle">
+      <button @click="pikachu = !pikachu">Toggle (Pikachu)</button>
+    </div>
+    <div class="btn-toggle">
+      <button @click="activateFullScreen()">Full Screen</button>
     </div>
   </div>
 </template>
@@ -31,11 +41,19 @@ export default {
   name: 'app',
   data () {
     return {
-      show: true
+      show: true,
+      fullscreen: false,
+      pikachu: false
     }
   },
   created () {
-    setTimeout(() => { this.show = false }, 4000)
+    setTimeout(() => { this.show = false }, 2000)
+  },
+  methods: {
+    activateFullScreen () {
+      this.fullscreen = true
+      setTimeout(() => { this.fullscreen = false }, 2000)
+    }
   },
   components: { VueElementLoading }
 }

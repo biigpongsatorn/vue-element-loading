@@ -1,7 +1,11 @@
 <template>
   <transition name="fade">
     <div v-show="isActive" ref="velmld"  class="velmld-overlay" :class="{ 'velmld-full-screen': isFullScreen }">
-      <component class="velmld-spinner" :is="spinner" :color="spinnerColor"></component>
+      <div class="velmld-spinner">
+        <slot name="default">
+          <component :is="spinner" :color="spinnerColor"></component>
+        </slot>
+      </div>
     </div>
   </transition>
 </template>
