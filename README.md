@@ -43,18 +43,37 @@ export default {
 
 # 🔎 Example
 
+## Inside container
 ```html
 <div>
-  <vue-element-loading :active="show" spinner="spinner" color="#FF6700"/>
+  <vue-element-loading :active="show" spinner="bar-fade-scale" color="#FF6700"/>
   <span>
     This is my content.
   </span>
 </div>
 ```
 
+## Full screen
+```html
+<div>
+  <vue-element-loading :active="show" is-full-screen/>
+</div>
+```
+
+## Customize loader
+```html
+<div>
+  <vue-element-loading :active="show">
+    <img src="/static/pikachu.gif" width="55px" height="55px">
+  </vue-element-loading>
+</div>
+```
+
 # 🌀 Spinner
 
 <img src="https://raw.githubusercontent.com/biigpongsatorn/vue-element-loading/HEAD/static/spinner.png">
+
+[See full document here.](https://biigpongsatorn.github.io/#/vue-element-loading)
 
 # ⚙️ Props
 | Props       | Type          | Default  | Description  |
