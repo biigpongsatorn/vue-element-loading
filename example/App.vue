@@ -3,7 +3,7 @@
     <div id="app">
       <VueElementLoading :active="fullscreen" is-full-screen/>
       <VueElementLoading :active="show" spinner="bar-fade-scale" color="#FF6700"/>
-      <VueElementLoading :active="pikachu" spinner="bar-fade-scale" color="#FF6700">
+      <VueElementLoading :active="pikachu">
         <img src="https://i.pinimg.com/originals/9f/b1/25/9fb125f1fedc8cc62ab5b20699ebd87d.gif" width="55px" height="55px">
       </VueElementLoading>
       <span>
