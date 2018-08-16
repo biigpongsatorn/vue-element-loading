@@ -28,7 +28,7 @@ yarn add vue-element-loading
 import Vue from 'vue'
 import VueElementLoading from 'vue-element-loading'
 
-Vue.component('VueElementLoading', ElementLoading)
+Vue.component('VueElementLoading', VueElementLoading)
 ```
 or
 ```javascript
