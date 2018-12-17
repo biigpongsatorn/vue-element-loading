@@ -5,7 +5,7 @@ module.exports = {
   format: ['umd-min'],
   css: true,
   plugins: [
-    vue({ css: true })
+    vue.default({ css: true })
   ],
   outDir: 'lib'
 }
