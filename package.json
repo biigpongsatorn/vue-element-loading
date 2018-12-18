@@ -13,7 +13,7 @@
     "url": "git+https://github.com/biigpongsatorn/vue-element-loading.git"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --mode development --watch",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --hot",
     "build:lib": "rm -rf ./lib && bili src/index.vue",
     "build:example": "rm -rf ./dist && cross-env NODE_ENV=production webpack --mode production --progress --hide-modules",
     "prepublish": "npm run build:lib"
@@ -39,6 +39,7 @@
     "vue-loader": "^15.4.2",
     "vue-template-compiler": "^2.5.21",
     "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   }
 }
