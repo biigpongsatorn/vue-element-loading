@@ -1,6 +1,7 @@
 <template>
   <div>
     <div id="app">
+      <VueElementLoading :active="fullscreenGreenBg" is-full-screen backgroundColor="rgba(66, 185, 131, .9)" />
       <VueElementLoading :active="fullscreen" is-full-screen/>
       <VueElementLoading :active="show" spinner="bar-fade-scale" color="#FF6700"/>
       <VueElementLoading :active="pikachu">
@@ -30,6 +31,9 @@
     <div class="btn-toggle">
       <button @click="activateFullScreen()">Full Screen</button>
     </div>
+    <div class="btn-toggle">
+      <button @click="activateFullScreenGreenBg()">Full Screen (Green background color)</button>
+    </div>
   </div>
 </template>
 
@@ -43,6 +47,7 @@ export default {
     return {
       show: true,
       fullscreen: false,
+      fullscreenGreenBg: false,
       pikachu: false
     }
   },
@@ -53,6 +58,10 @@ export default {
     activateFullScreen () {
       this.fullscreen = true
       setTimeout(() => { this.fullscreen = false }, 2000)
+    },
+    activateFullScreenGreenBg () {
+      this.fullscreenGreenBg = true
+      setTimeout(() => { this.fullscreenGreenBg = false }, 2000)
     }
   },
   components: { VueElementLoading }
