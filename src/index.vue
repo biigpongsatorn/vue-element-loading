@@ -1,6 +1,11 @@
 <template>
   <transition name="fade">
-    <div v-show="isActive" ref="velmld"  class="velmld-overlay" :class="{ 'velmld-full-screen': isFullScreen }">
+    <div
+      v-show="isActive"
+      ref="velmld"
+      class="velmld-overlay"
+      :class="{ 'velmld-full-screen': isFullScreen }"
+      :style="{ backgroundColor }">
       <div class="velmld-spinner">
         <slot name="default">
           <component :is="spinner" :color="spinnerColor"></component>
@@ -25,6 +30,10 @@ export default {
     isFullScreen: {
       type: Boolean,
       default: false
+    },
+    backgroundColor: {
+      type: String,
+      default: 'rgba(255, 255, 255, .9)'
     }
   },
   data () {
@@ -71,7 +80,6 @@ export default {
 .velmld-overlay {
   position: absolute;
   z-index: 3000;
-  background-color: rgba(255, 255, 255, .9);
   margin: 0;
   top: 0;
   right: 0;
