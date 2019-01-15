@@ -1,7 +1,7 @@
 {
   "name": "vue-element-loading",
   "description": "Loading inside a container or full screen for Vue.js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "biig_pongsatorn <biig_pongsatorn@hotmail.com>",
   "license": "MIT",
   "main": "lib/vue-element-loading.min.js",
