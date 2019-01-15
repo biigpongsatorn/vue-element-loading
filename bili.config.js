@@ -1,4 +1,4 @@
-const vue = require('rollup-plugin-vue')
+const vue = require('rollup-plugin-vue');
 
 module.exports = {
   banner: true,
@@ -8,4 +8,4 @@ module.exports = {
     vue({ css: true })
   ],
   outDir: 'lib'
-}
+};
