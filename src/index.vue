@@ -8,7 +8,7 @@
       :style="{ backgroundColor }">
       <div class="velmld-spinner">
         <slot name="default">
-          <component :is="spinner" :color="spinnerColor"></component>
+          <component :is="spinner" :color="spinnerColor" :size="spinnerSize" :duration="spinnerDuration"></component>
         </slot>
       </div>
     </div>
@@ -34,12 +34,22 @@ export default {
     backgroundColor: {
       type: String,
       default: 'rgba(255, 255, 255, .9)'
+    },
+    size: {
+      type: String,
+      default: '40'
+    },
+    duration: {
+      type: String,
+      default: '0.6'
     }
   },
   data () {
     return {
       isActive: this.active || false,
-      spinnerColor: this.color
+      spinnerColor: this.color,
+      spinnerSize: this.size+'px',
+      spinnerDuration: this.duration+'s'
     }
   },
   /**
@@ -60,10 +70,17 @@ export default {
       }
     },
     /**
-     * Binding outside component color value and inside component color value.
+     * Binding outside component color, size and duration values and 
+     * corresponding inside component values.
      */
     color (value) {
       this.spinnerColor = value
+    },
+    size (value) {
+      this.spinnerSize = value
+    },
+    duration (value) {
+      this.spinnerDuration = value
     }
   },
   components: Loaders
