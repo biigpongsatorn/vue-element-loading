@@ -1,9 +1,9 @@
 <template>
   <div>
     <div id="app">
-      <VueElementLoading :active="fullscreenGreenBg" is-full-screen backgroundColor="rgba(66, 185, 131, .9)" />
-      <VueElementLoading :active="fullscreen" is-full-screen/>
-      <VueElementLoading :active="show" spinner="bar-fade-scale" color="#FF6700"/>
+      <VueElementLoading :spinner="spinnerKind" :size="spinnerSize" :duration="spinnerDuration" :color="spinnerColor" :active="fullscreenGreenBg" is-full-screen backgroundColor="rgba(66, 185, 131, .9)"/>
+      <VueElementLoading :spinner="spinnerKind" :size="spinnerSize" :duration="spinnerDuration" :color="spinnerColor" :active="fullscreen" is-full-screen />
+      <VueElementLoading :spinner="spinnerKind" :size="spinnerSize" :duration="spinnerDuration" :color="spinnerColor" :active="show && !fullscreen && !fullscreenGreenBg" />
       <VueElementLoading :active="pikachu">
         <img src="https://i.pinimg.com/originals/9f/b1/25/9fb125f1fedc8cc62ab5b20699ebd87d.gif" width="55px" height="55px">
       </VueElementLoading>
@@ -21,6 +21,38 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis,
         nibh id hendrerit imperdiet, elit sapien laoreet elit
       </span>
+    </div>
+    <div class="btn-toggle">
+      Spinner:
+      <select v-model="spinnerKind">
+        <option value="bar-fade-scale">bar-fade-scale</option>
+        <option value="bar-fade">bar-fade</option>
+        <option value="line-down">line-down</option>
+        <option value="line-scale">line-scale</option>
+        <option value="line-wave">line-wave</option>
+        <option value="ring">ring</option>
+        <option value="spinner">spinner</option>
+        <option value="mini-spinner">mini-spinner</option>
+      </select>
+      <select v-model="spinnerColor">
+        <option value="#f00">Red</option>
+        <option value="#0f0">Green</option>
+        <option value="#FF6700">Default Color</option>
+        <option value="#00f">Blue</option>
+      </select>        
+      <select v-model="spinnerSize">
+        <option value="32">32px</option>
+        <option value="64">64px</option>
+        <option value="128">128px</option>
+        <option value="256">256px</option>
+      </select>
+      <select v-model="spinnerDuration">
+        <option value="0.1">Very Fast</option>
+        <option value="0.3">Fast</option>
+        <option value="0.6">Default Speed</option>
+        <option value="1.2">Slow</option>
+        <option value="2.4">Very Slow</option>
+      </select>
     </div>
     <div class="btn-toggle">
       <button @click="show = !show">Toggle (Inside Container)</button>
@@ -48,7 +80,11 @@ export default {
       show: true,
       fullscreen: false,
       fullscreenGreenBg: false,
-      pikachu: false
+      pikachu: false,
+      spinnerKind: 'bar-fade-scale',
+      spinnerColor: '#FF6700',
+      spinnerSize: '32',
+      spinnerDuration: '0.6'
     }
   },
   created () {
