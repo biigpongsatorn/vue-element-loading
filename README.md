@@ -12,6 +12,7 @@
 # 👀 Document & Demo Page
 
 [Docs & Live demo](https://biigpongsatorn.github.io/#/vue-element-loading)
+[Fully feature live demo](https://vue-element-loading.netlify.com/)
 
 # 💻 Install
 
@@ -136,4 +137,4 @@ If you like this project, You can support me with starring ⭐ this repository.
 
 [MIT](LICENSE)
 
-Developed with ❤️ and ☕️ 
+Developed with ❤️ and ☕️
