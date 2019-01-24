@@ -11,8 +11,8 @@
 
 # 👀 Document & Demo Page
 
-[Docs & Live demo](https://biigpongsatorn.github.io/#/vue-element-loading)
-[Fully feature live demo](https://vue-element-loading.netlify.com/)
+- [Docs & Live demo](https://biigpongsatorn.github.io/#/vue-element-loading)
+- [Fully feature live demo](https://vue-element-loading.netlify.com/)
 
 # 💻 Install
 
