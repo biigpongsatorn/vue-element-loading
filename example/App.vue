@@ -66,6 +66,7 @@
     <div class="btn-toggle">
       <button @click="activateFullScreenGreenBg()">Full Screen (Green background color)</button>
     </div>
+    <input class="btn-toggle" type="text" v-model="text" placeholder="custom text "></input>
   </div>
 </template>
 
@@ -77,6 +78,7 @@ export default {
   name: 'app',
   data () {
     return {
+      text: '',
       show: true,
       fullscreen: false,
       fullscreenGreenBg: false,

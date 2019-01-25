@@ -10,6 +10,7 @@
         <slot name="default">
           <component :is="spinner" :color="color" :size="`${size}px`" :duration="`${duration}s`"></component>
         </slot>
+        <div :style="{ color }" >{{text}}</div>
       </div>
     </div>
   </transition>
@@ -25,6 +26,10 @@ export default {
     spinner: {
       type: String,
       default: 'spinner'
+    },
+    text: {
+      type: String,
+      default: ''
     },
     color: String,
     isFullScreen: {
