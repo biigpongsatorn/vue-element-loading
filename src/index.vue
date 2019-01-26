@@ -10,7 +10,7 @@
         <slot name="default">
           <component :is="spinner" :color="color" :size="`${size}px`" :duration="`${duration}s`"></component>
         </slot>
-        <div :style="{ color, ...textStyle }">{{ text }}</div>
+        <div v-if="text.length" :style="{ color, ...textStyle }">{{ text }}</div>
       </div>
     </div>
   </transition>
