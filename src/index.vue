@@ -2,15 +2,26 @@
   <transition name="fade">
     <div
       v-show="isActive"
+      :class="{ 'velmld-full-screen': isFullScreen }"
+      :style="{ backgroundColor }"
       ref="velmld"
       class="velmld-overlay"
-      :class="{ 'velmld-full-screen': isFullScreen }"
-      :style="{ backgroundColor }">
+    >
       <div class="velmld-spinner">
         <slot name="default">
-          <component :is="spinner" :color="color" :size="`${size}px`" :duration="`${duration}s`"></component>
+          <component
+            :is="spinner"
+            :color="color"
+            :size="`${size}px`"
+            :duration="`${duration}s`"
+          />
         </slot>
-        <div v-if="text.length" :style="{ color, ...textStyle }">{{ text }}</div>
+        <div
+          v-if="text.length"
+          :style="{ color, ...textStyle }"
+        >
+          {{ text }}
+        </div>
       </div>
     </div>
   </transition>
