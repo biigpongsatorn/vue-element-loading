@@ -46,7 +46,10 @@ export default {
       type: Object,
       default: {}
     },
-    color: String,
+    color: {
+      type: String,
+      default: '#000'
+    },
     isFullScreen: {
       type: Boolean,
       default: false
