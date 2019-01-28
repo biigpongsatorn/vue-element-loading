@@ -72,6 +72,28 @@ Use the `color` parameter to set the color of the displayed spinner (does not af
 </div>
 ```
 
+## Set text
+Use the `text` parameter to set the text which will appear below loader.
+```html
+<div>
+  <vue-element-loading :active="show" spinner="bar-fade-scale" color="#FF6700" text="Please wait..."/>
+  <span>
+    This is my content.
+  </span>
+</div>
+```
+
+## Set text style
+Use the `textStyle` parameter to set the style of text( you need to pass css-in-js way using camelCase exp. fontSize, backgroundColor etc).
+```html
+<div>
+  <vue-element-loading :active="show" spinner="bar-fade-scale" color="#FF6700" text="Please textStyle={fontSize: '25px'}  wait..."/>
+  <span>
+    This is my content.
+  </span>
+</div>
+```
+
 ## Adjust Spinner Size
 Use the `size` parameter to set the size of the displayed spinner (does not affect custom spinner images).
 ```html
@@ -119,6 +141,9 @@ Use the `duration` parameter to set the animation loop duration in seconds (does
 | size    | String        | "40"        | the size to display the spinner in pixels  (**NOTE:** this will not affect custom spinner images) |
 | duration    | String        | "0.6"        | the duration of one 'loop' of the spinner animation, in seconds  (**NOTE:** this will not affect custom spinner images) |
 | is-full-screen    | Boolean        | false        | Loader will overlay the full page |
+| text   | String    | -  | Text will appear below loader |
+| textStyle | Object | {} | Change style of text |
+
 
 # 🤝 Contributing
 1. Fork this repository.

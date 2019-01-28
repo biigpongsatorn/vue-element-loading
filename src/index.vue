@@ -10,6 +10,7 @@
         <slot name="default">
           <component :is="spinner" :color="color" :size="`${size}px`" :duration="`${duration}s`"></component>
         </slot>
+        <div v-if="text.length" :style="{ color, ...textStyle }">{{ text }}</div>
       </div>
     </div>
   </transition>
@@ -25,6 +26,14 @@ export default {
     spinner: {
       type: String,
       default: 'spinner'
+    },
+    text: {
+      type: String,
+      default: ''
+    },
+    textStyle: {
+      type: Object,
+      default: {}
     },
     color: String,
     isFullScreen: {
@@ -93,6 +102,7 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
+  text-align: center
 }
 .velmld-full-screen {
   position: fixed;

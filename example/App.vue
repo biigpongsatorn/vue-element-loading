@@ -1,9 +1,9 @@
 <template>
   <div>
     <div id="app">
-      <VueElementLoading :spinner="spinnerKind" :size="spinnerSize" :duration="spinnerDuration" :color="spinnerColor" :active="fullscreenGreenBg" is-full-screen backgroundColor="rgba(66, 185, 131, .9)"/>
-      <VueElementLoading :spinner="spinnerKind" :size="spinnerSize" :duration="spinnerDuration" :color="spinnerColor" :active="fullscreen" is-full-screen />
-      <VueElementLoading :spinner="spinnerKind" :size="spinnerSize" :duration="spinnerDuration" :color="spinnerColor" :active="show && !fullscreen && !fullscreenGreenBg" />
+      <VueElementLoading :spinner="spinnerKind" :size="spinnerSize" :duration="spinnerDuration" :color="spinnerColor" :active="fullscreenGreenBg" :text="text" :textStyle="textStyle" is-full-screen backgroundColor="rgba(66, 185, 131, .9)"/>
+      <VueElementLoading :spinner="spinnerKind" :size="spinnerSize" :duration="spinnerDuration" :color="spinnerColor" :active="fullscreen" :text="text" :textStyle="textStyle" is-full-screen />
+      <VueElementLoading :spinner="spinnerKind" :size="spinnerSize" :duration="spinnerDuration" :color="spinnerColor" :active="show && !fullscreen && !fullscreenGreenBg" :text="text" :textStyle="textStyle"/>
       <VueElementLoading :active="pikachu">
         <img src="https://i.pinimg.com/originals/9f/b1/25/9fb125f1fedc8cc62ab5b20699ebd87d.gif" width="55px" height="55px">
       </VueElementLoading>
@@ -66,6 +66,7 @@
     <div class="btn-toggle">
       <button @click="activateFullScreenGreenBg()">Full Screen (Green background color)</button>
     </div>
+    <input class="btn-toggle" type="text" v-model="text" placeholder="custom text"/>
   </div>
 </template>
 
@@ -77,6 +78,8 @@ export default {
   name: 'app',
   data () {
     return {
+      textStyle: {},
+      text: '',
       show: true,
       fullscreen: false,
       fullscreenGreenBg: false,
