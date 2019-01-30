@@ -26,6 +26,7 @@
         :spinner="spinnerKind"
         :size="spinnerSize"
         :duration="spinnerDuration"
+        :color="spinnerColor"
         :active="show && !fullscreen && !fullscreenGreenBg"
         :text="text"
         :textStyle="textStyle"
