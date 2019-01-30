@@ -8,7 +8,7 @@
         :color="spinnerColor"
         :active="fullscreenGreenBg"
         :text="text"
-        :textStyle="textStyle"
+        :textStyle="textStyles[spinnerTextStyle] || {}"
         backgroundColor="rgba(66, 185, 131, .9)"
         is-full-screen
       />
@@ -19,7 +19,7 @@
         :color="spinnerColor"
         :active="fullscreen"
         :text="text"
-        :textStyle="textStyle"
+        :textStyle="textStyles[spinnerTextStyle] || {}"
         is-full-screen
       />
       <VueElementLoading
@@ -29,7 +29,7 @@
         :color="spinnerColor"
         :active="show && !fullscreen && !fullscreenGreenBg"
         :text="text"
-        :textStyle="textStyle"
+        :textStyle="textStyles[spinnerTextStyle] || {}"
       />
       <VueElementLoading :active="pikachu">
         <img
@@ -85,6 +85,11 @@
           <option value="1.2">Slow</option>
           <option value="2.4">Very Slow</option>
         </select>
+        <select v-model="spinnerTextStyle">
+          <option value="none">No Text Style</option>
+          <option value="bold">Bold Text</option>
+          <option value="bigNeonGreen">Big Neon Green</option>
+        </select>
       </div>
       <input
         v-model="text"
@@ -118,7 +123,11 @@ export default {
   name: 'app',
   data () {
     return {
-      textStyle: {},
+      textStyles: {
+          none: {},
+          bold: {'font-weight':'bold'},
+          bigNeonGreen : { 'font-size':'300%', color:'#0F0', 'text-shadow':'0 0 1em #0F0' }
+      },
       text: '',
       show: true,
       fullscreen: false,
@@ -127,7 +136,8 @@ export default {
       spinnerKind: 'bar-fade-scale',
       spinnerColor: '#FF6700',
       spinnerSize: '32',
-      spinnerDuration: '0.6'
+      spinnerDuration: '0.6',
+      spinnerTextStyle: 'none'
     }
   },
   created () {
