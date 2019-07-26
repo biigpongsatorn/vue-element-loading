@@ -44,7 +44,9 @@ export default {
     },
     textStyle: {
       type: Object,
-      default: () => {}
+      default: function () {
+        return {}
+      }
     },
     color: {
       type: String,
