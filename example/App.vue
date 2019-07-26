@@ -116,8 +116,8 @@
 </template>
 
 <script>
-import VueElementLoading from '../src'
-// import VueElementLoading from '../lib/vue-element-loading.min.js'
+// import VueElementLoading from '../src'
+import VueElementLoading from '../lib/vue-element-loading.min.js'
 
 export default {
   name: 'app',
