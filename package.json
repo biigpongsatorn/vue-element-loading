@@ -15,7 +15,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --hot",
     "build:lib": "rm -rf ./lib && bili src/index.vue",
-    "build:example": "rm -rf ./dist && cross-env NODE_ENV=production webpack --mode production --progress --hide-modules"
+    "build:example": "rm -rf ./dist && cross-env NODE_ENV=production webpack --mode production --progress --hide-modules",
+    "prepublish": "npm run build:lib"
   },
   "dependencies": {
     "vue": "^2.5.22"
