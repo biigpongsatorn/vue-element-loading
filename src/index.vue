@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
     <div
-      v-show="isActive"
+      v-show="isActive || isActiveDelay"
       :class="{ 'velmld-full-screen': isFullScreen }"
       :style="{ backgroundColor }"
       ref="velmld"
@@ -67,11 +67,16 @@ export default {
     duration: {
       type: String,
       default: '0.6'
+    },
+    delay: {
+      type: [String, Number],
+      default: 0
     }
   },
   data () {
     return {
-      isActive: this.active || false
+      isActive: this.active || false,
+      isActiveDelay: false
     }
   },
   /**
@@ -79,6 +84,20 @@ export default {
    */
   mounted () {
     this.$refs.velmld.parentNode.classList.add('velmld-parent')
+
+    if (this.delay) {
+      const delayMs = (+this.delay) * 1000
+      this.delayActive(delayMs)
+    }
+  },
+  methods: {
+    delayActive (ms) {
+      this.isActiveDelay = true
+
+      setTimeout(() => {
+        this.isActiveDelay = false  
+      }, ms)
+    }
   },
   watch: {
     /**

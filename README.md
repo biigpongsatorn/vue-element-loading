@@ -142,6 +142,7 @@ Use the `duration` parameter to set the animation loop duration in seconds (does
 | background-color    | String        | rgba(255, 255, 255, .9)        | Background color of spinner icon (for overlay) |
 | size    | String        | "40"        | The size to display the spinner in pixels  (**NOTE:** this will not affect custom spinner images) |
 | duration    | String        | "0.6"        | The duration of one 'loop' of the spinner animation, in seconds  (**NOTE:** this will not affect custom spinner images) |
+| delay    | Number \| String        | 0        | The minimum appearing duration of loading in seconds |
 | is-full-screen    | Boolean        | false        | Loader will overlay the full page |
 | text   | String    | -  | Text will appear below loader |
 | text-style | Object | {} | Change style of the text below loader |
