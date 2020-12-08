@@ -7,6 +7,7 @@
         :duration="spinnerDuration"
         :color="spinnerColor"
         :active="fullscreenGreenBg"
+        :delay="delay"
         :text="text"
         :textStyle="textStyles[spinnerTextStyle] || {}"
         backgroundColor="rgba(66, 185, 131, .9)"
@@ -18,6 +19,7 @@
         :duration="spinnerDuration"
         :color="spinnerColor"
         :active="fullscreen"
+        :delay="delay"
         :text="text"
         :textStyle="textStyles[spinnerTextStyle] || {}"
         is-full-screen
@@ -28,10 +30,11 @@
         :duration="spinnerDuration"
         :color="spinnerColor"
         :active="show && !fullscreen && !fullscreenGreenBg"
+        :delay="delay"
         :text="text"
         :textStyle="textStyles[spinnerTextStyle] || {}"
       />
-      <VueElementLoading :active="pikachu">
+      <VueElementLoading :active="pikachu" :delay="delay">
         <img
           src="https://i.pinimg.com/originals/9f/b1/25/9fb125f1fedc8cc62ab5b20699ebd87d.gif"
           width="55px"
@@ -97,6 +100,12 @@
         type="text"
         placeholder="Custom text..."
       />
+      <input
+        v-model="delay"
+        class="btn-toggle"
+        type="number"
+        placeholder="Delay (in seconds) ..."
+      />
     </div>
     <div class="f-left-w-100pct">
       <div class="btn-toggle">
@@ -129,6 +138,7 @@ export default {
           bigNeonGreen : { 'font-size':'300%', color:'#0F0', 'text-shadow':'0 0 1em #0F0' }
       },
       text: '',
+      delay: undefined,
       show: true,
       fullscreen: false,
       fullscreenGreenBg: false,
