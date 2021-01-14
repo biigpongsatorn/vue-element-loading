@@ -55,12 +55,7 @@ module.exports = (env, args) => {
         new UglifyJsPlugin({
           sourceMap: true,
           parallel: 4,
-          uglifyOptions: {
-            warnings: false,
-            compress: {
-              warnings: false
-            },
-          },
+          uglifyOptions: {},
         })
       ]
     },
