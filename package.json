@@ -1,12 +1,12 @@
 {
   "name": "vue-element-loading",
   "description": "Loading inside a container or full screen for Vue.js",
-  "version": "1.1.6",
+  "version": "2.0.0",
   "author": "biig_pongsatorn <biig_pongsatorn@hotmail.com>",
   "license": "MIT",
-  "main": "lib/vue-element-loading.min.js",
+  "main": "dist/VueElementLoading.common.js",
   "files": [
-    "lib"
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -14,19 +14,19 @@
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --hot",
-    "build:lib": "rm -rf ./lib && bili src/index.vue",
+    "build": "npx vue-cli-service build --target lib --name VueElementLoading ./src/index.js --mode production",
+    "build:lib": "npx vue-cli-service build --target lib --name VueElementLoading ./src/index.js --mode production",
     "build:example": "rm -rf ./dist && cross-env NODE_ENV=production webpack --mode production --progress --hide-modules",
-    "prepublish": "npm run build:lib"
+    "prepublish": "npm run build"
   },
-  "dependencies": {
-    "vue": "^2.5.22"
-  },
+  "dependencies": {},
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
   ],
   "devDependencies": {
+    "acorn": "^8.0.4",
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "babel-loader": "^8.0.5",
@@ -34,10 +34,12 @@
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.0",
     "file-loader": "^3.0.1",
-    "rollup-plugin-vue": "^4.6.1",
+    "rollup-plugin-vue": "^6.0.0",
     "uglifyjs-webpack-plugin": "^2.1.1",
-    "vue-loader": "^15.5.1",
-    "vue-template-compiler": "^2.5.22",
+    "vue": "^3.0.5",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/cli-service": "^4.5.6",
+    "vue-loader": "16.1.2",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": ">=3.1.11"

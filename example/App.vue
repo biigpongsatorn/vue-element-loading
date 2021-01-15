@@ -34,8 +34,8 @@
       <VueElementLoading :active="pikachu">
         <img
           src="https://i.pinimg.com/originals/9f/b1/25/9fb125f1fedc8cc62ab5b20699ebd87d.gif"
-          width="55px"
-          height="55px"
+          width="55"
+          height="55"
         >
       </VueElementLoading>
       <span>
@@ -116,8 +116,7 @@
 </template>
 
 <script>
-// import VueElementLoading from '../src'
-import VueElementLoading from '../lib/vue-element-loading.min.js'
+import VueElementLoading from '../src/index.vue';
 
 export default {
   name: 'app',
