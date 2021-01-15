@@ -14,8 +14,8 @@
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --hot",
-    "build": "npx vue-cli-service build --target lib --name VueElementLoading ./src/index.js --mode production",
-    "build:lib": "npx vue-cli-service build --target lib --name VueElementLoading ./src/index.js --mode production",
+    "build": "vue-cli-service build --target lib --name VueElementLoading ./src/index.js --mode production",
+    "build:lib": "vue-cli-service build --target lib --name VueElementLoading ./src/index.js --mode production",
     "build:example": "rm -rf ./dist && cross-env NODE_ENV=production webpack --mode production --progress --hide-modules",
     "prepublish": "npm run build"
   },
