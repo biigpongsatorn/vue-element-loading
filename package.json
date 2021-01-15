@@ -1,8 +1,8 @@
 {
   "name": "vue-element-loading",
   "description": "Loading inside a container or full screen for Vue.js",
-  "version": "1.1.7",
-  "author": "sitronik",
+  "version": "2.0.0",
+  "author": "biig_pongsatorn <biig_pongsatorn@hotmail.com>",
   "license": "MIT",
   "main": "dist/VueElementLoading.common.js",
   "files": [
@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sitronik/vue-element-loading.git"
+    "url": "git+https://github.com/biigpongsatorn/vue-element-loading.git"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --hot",
