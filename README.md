@@ -21,35 +21,53 @@
 ```sh
 npm install --save vue-element-loading
 ```
+
 or
+
 ```sh
 yarn add vue-element-loading
 ```
 
-# 🕹 Usage
-```javascript
-import Vue from 'vue'
-import VueElementLoading from 'vue-element-loading'
+# 🖥 Install (Vue 3)
 
-Vue.component('VueElementLoading', VueElementLoading)
+```sh
+npm install --save vue-element-loading@next
 ```
+
 or
+
+```sh
+yarn add vue-element-loading@next
+```
+
+# 🕹 Usage
+
 ```javascript
-import VueElementLoading from 'vue-element-loading'
+import Vue from "vue";
+import VueElementLoading from "vue-element-loading";
+
+Vue.component("VueElementLoading", VueElementLoading);
+```
+
+or
+
+```javascript
+import VueElementLoading from "vue-element-loading";
 
 export default {
   components: {
     VueElementLoading
   }
-}
+};
 ```
 
 # 🔎 Example
 
 ## Inside container
+
 ```html
 <div class="parent">
-  <vue-element-loading :active="show" spinner="bar-fade-scale"/>
+  <vue-element-loading :active="show" spinner="bar-fade-scale" />
   <span>
     This is my content.
   </span>
@@ -57,17 +75,24 @@ export default {
 ```
 
 ## Full screen
+
 ```html
 <body>
-  <vue-element-loading :active="show" is-full-screen/>
+  <vue-element-loading :active="show" is-full-screen />
 </body>
 ```
 
 ## Adjust Spinner Color
+
 Use the `color` parameter to set the color of the displayed spinner (does not affect custom spinner images).
+
 ```html
 <div class="parent">
-  <vue-element-loading :active="show" spinner="bar-fade-scale" color="#FF6700"/>
+  <vue-element-loading
+    :active="show"
+    spinner="bar-fade-scale"
+    color="#FF6700"
+  />
   <span>
     This is my content.
   </span>
@@ -75,10 +100,17 @@ Use the `color` parameter to set the color of the displayed spinner (does not af
 ```
 
 ## Set text
+
 Use the `text` parameter to set the text which will appear below loader.
+
 ```html
 <div class="parent">
-  <vue-element-loading :active="show" spinner="bar-fade-scale" color="#FF6700" text="Please wait..."/>
+  <vue-element-loading
+    :active="show"
+    spinner="bar-fade-scale"
+    color="#FF6700"
+    text="Please wait..."
+  />
   <span>
     This is my content.
   </span>
@@ -86,10 +118,17 @@ Use the `text` parameter to set the text which will appear below loader.
 ```
 
 ## Set text style
+
 Use the `textStyle` parameter to set the style of text( you need to pass css-in-js way using camelCase exp. fontSize, backgroundColor etc).
+
 ```html
 <div class="parent">
-  <vue-element-loading :active="show" spinner="bar-fade-scale" color="#FF6700" text="Please textStyle={fontSize: '25px'}  wait..."/>
+  <vue-element-loading
+    :active="show"
+    spinner="bar-fade-scale"
+    color="#FF6700"
+    text="Please textStyle={fontSize: '25px'}  wait..."
+  />
   <span>
     This is my content.
   </span>
@@ -97,10 +136,12 @@ Use the `textStyle` parameter to set the style of text( you need to pass css-in-
 ```
 
 ## Adjust Spinner Size
+
 Use the `size` parameter to set the size of the displayed spinner (does not affect custom spinner images).
+
 ```html
 <div class="parent">
-  <vue-element-loading :active="show" spinner="bar-fade-scale" size="128"/>
+  <vue-element-loading :active="show" spinner="bar-fade-scale" size="128" />
   <span>
     This is my content.
   </span>
@@ -108,10 +149,12 @@ Use the `size` parameter to set the size of the displayed spinner (does not affe
 ```
 
 ## Adjust Spinner Animation Speed
+
 Use the `duration` parameter to set the animation loop duration in seconds (does not affect custom spinner images).
+
 ```html
 <div class="parent">
-  <vue-element-loading :active="show" spinner="bar-fade-scale" duration="1.0"/>
+  <vue-element-loading :active="show" spinner="bar-fade-scale" duration="1.0" />
   <span>
     This is my content.
   </span>
@@ -119,10 +162,11 @@ Use the `duration` parameter to set the animation loop duration in seconds (does
 ```
 
 ## Customize loader
+
 ```html
 <div class="parent">
   <vue-element-loading :active="show">
-    <img src="/static/pikachu.gif" width="55px" height="55px">
+    <img src="/static/pikachu.gif" width="55px" height="55px" />
   </vue-element-loading>
 </div>
 ```
@@ -134,21 +178,22 @@ Use the `duration` parameter to set the animation loop duration in seconds (does
 [See full document here.](https://biigpongsatorn.github.io/#/vue-element-loading)
 
 # ⚙️ Props
-| Props       | Type          | Default  | Description  |
-| ----------- |:--------------| ---------|--------------|
-| active      | Boolean       | -        | Status for show/hide loading |
-| spinner    | String        | spinner   | Spinner icon name: `spinner`, `mini-spinner`, `ring`, `line-wave`, `line-scale`, `line-down`, `bar-fade`, `bar-fade-scale` |
-| color    | String        | #000        | Color of spinner icon |
-| background-color    | String        | rgba(255, 255, 255, .9)        | Background color of spinner icon (for overlay) |
-| size    | String        | "40"        | The size to display the spinner in pixels  (**NOTE:** this will not affect custom spinner images) |
-| duration    | String        | "0.6"        | The duration of one 'loop' of the spinner animation, in seconds  (**NOTE:** this will not affect custom spinner images) |
-| delay    | Number \| String        | 0        | The minimum appearing duration of loading in seconds |
-| is-full-screen    | Boolean        | false        | Loader will overlay the full page |
-| text   | String    | -  | Text will appear below loader |
-| text-style | Object | {} | Change style of the text below loader |
 
+| Props            | Type             | Default                 | Description                                                                                                                |
+| ---------------- | :--------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| active           | Boolean          | -                       | Status for show/hide loading                                                                                               |
+| spinner          | String           | spinner                 | Spinner icon name: `spinner`, `mini-spinner`, `ring`, `line-wave`, `line-scale`, `line-down`, `bar-fade`, `bar-fade-scale` |
+| color            | String           | #000                    | Color of spinner icon                                                                                                      |
+| background-color | String           | rgba(255, 255, 255, .9) | Background color of spinner icon (for overlay)                                                                             |
+| size             | String           | "40"                    | The size to display the spinner in pixels (**NOTE:** this will not affect custom spinner images)                           |
+| duration         | String           | "0.6"                   | The duration of one 'loop' of the spinner animation, in seconds (**NOTE:** this will not affect custom spinner images)     |
+| delay            | Number \| String | 0                       | The minimum appearing duration of loading in seconds                                                                       |
+| is-full-screen   | Boolean          | false                   | Loader will overlay the full page                                                                                          |
+| text             | String           | -                       | Text will appear below loader                                                                                              |
+| text-style       | Object           | {}                      | Change style of the text below loader                                                                                      |
 
 # 🤝 Contributing
+
 1. Fork this repository.
 2. Create new branch with feature name.
 3. Run `npm install` and `npm run dev`.
