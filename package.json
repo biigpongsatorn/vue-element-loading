@@ -1,7 +1,7 @@
 {
   "name": "vue-element-loading",
   "description": "Loading inside a container or full screen for Vue.js 3",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "author": "biig_pongsatorn <biig_pongsatorn@hotmail.com>",
   "license": "MIT",
   "main": "dist/VueElementLoading.common.js",
@@ -44,5 +44,6 @@
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": ">=3.1.11"
-  }
+  },
+  "types": "types/index.d.ts"
 }
