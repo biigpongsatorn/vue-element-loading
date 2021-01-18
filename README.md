@@ -1,15 +1,15 @@
 <a href="https://www.buymeacoffee.com/biigpongsatorn" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 <p>
-  <a href="https://npmjs.com/package/vue-element-loading"><img src="https://img.shields.io/npm/v/vue-element-loading.svg?style=flat" alt="NPM version"></a>
-  <a href="https://npmjs.com/package/vue-element-loading"><img src="https://img.shields.io/npm/dm/vue-element-loading.svg?style=flat" alt="NPM downloads"></a>
-  <a href="https://www.npmjs.com/package/vue-element-loading"><img src="https://img.shields.io/npm/l/vue-element-loading.svg?style=flat" alt="License"></a>
-  <a href="https://www.npmjs.com/package/vue-element-loading"><img src="https://travis-ci.org/biigpongsatorn/biigpongsatorn.github.io.svg?branch=dev" alt="Build Status"></a>
+  <a href="https://npmjs.com/package/vue-element-loading/v/3.0.0"><img src="https://img.shields.io/npm/v/vue-element-loading/next" alt="NPM version"></a>
+  <a href="https://npmjs.com/package/vue-element-loading/v/3.0.0"><img src="https://img.shields.io/npm/dm/vue-element-loading.svg?style=flat" alt="NPM downloads"></a>
+  <a href="https://www.npmjs.com/package/vue-element-loading/v/3.0.0"><img src="https://img.shields.io/npm/l/vue-element-loading.svg?style=flat" alt="License"></a>
+  <a href="https://www.npmjs.com/package/vue-element-loading/v/3.0.0"><img src="https://travis-ci.org/biigpongsatorn/biigpongsatorn.github.io.svg?branch=dev" alt="Build Status"></a>
 </p>
 
 # vue-element-loading
 
-⏳ Loading inside a container or full screen for Vue.js
+⏳ Loading inside a container or full screen for Vue.js 3
 
 # 👀 Document & Demo Page
 
@@ -19,11 +19,11 @@
 # 💻 Install
 
 ```sh
-npm install --save vue-element-loading
+npm install --save vue-element-loading@next
 ```
 or
 ```sh
-yarn add vue-element-loading
+yarn add vue-element-loading@next
 ```
 
 # 🕹 Usage
