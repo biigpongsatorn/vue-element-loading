@@ -1,12 +1,13 @@
 {
   "name": "vue-element-loading",
-  "description": "Loading inside a container or full screen for Vue.js",
-  "version": "3.0.0",
+  "description": "Loading inside a container or full screen for Vue.js 3",
+  "version": "3.0.1",
   "author": "biig_pongsatorn <biig_pongsatorn@hotmail.com>",
   "license": "MIT",
   "main": "dist/VueElementLoading.common.js",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "repository": {
     "type": "git",
@@ -14,8 +15,8 @@
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --hot",
-    "build": "npx vue-cli-service build --target lib --name VueElementLoading ./src/index.js --mode production",
-    "build:lib": "npx vue-cli-service build --target lib --name VueElementLoading ./src/index.js --mode production",
+    "build": "vue-cli-service build --target lib --name VueElementLoading ./src/index.js --mode production",
+    "build:lib": "vue-cli-service build --target lib --name VueElementLoading ./src/index.js --mode production",
     "build:example": "rm -rf ./dist && cross-env NODE_ENV=production webpack --mode production --progress --hide-modules",
     "prepublish": "npm run build"
   },
@@ -43,5 +44,6 @@
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": ">=3.1.11"
-  }
+  },
+  "types": "types/index.d.ts"
 }
