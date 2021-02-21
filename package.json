@@ -1,7 +1,7 @@
 {
   "name": "vue-element-loading",
   "description": "Loading inside a container or full screen for Vue.js SSR support",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "author": "biig_pongsatorn <biig_pongsatorn@hotmail.com>",
   "license": "MIT",
   "main": "client/vue-element-loading.min.js",
