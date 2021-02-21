@@ -4,7 +4,7 @@
   "version": "2.0.2",
   "author": "biig_pongsatorn <biig_pongsatorn@hotmail.com>",
   "license": "MIT",
-  "main": "client/vue-element-loading.js",
+  "main": "client/vue-element-loading.min.js",
   "files": [
     "client",
     "ssr"
