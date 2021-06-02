@@ -33,6 +33,7 @@
     "file-loader": "^3.0.1",
     "rollup": "^0.67.0",
     "rollup-plugin-css-only": "0.4.0",
+    "rollup-plugin-uglify": "^6.0.4",
     "rollup-plugin-vue": "^5.1.9",
     "uglify-es": "^3.3.9",
     "uglifyjs-webpack-plugin": "^1.1.2",
