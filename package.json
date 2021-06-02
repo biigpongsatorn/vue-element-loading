@@ -15,7 +15,7 @@
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --hot",
-    "build:lib": "rollup --environment NODE_ENV:production -c rollup.config.js && uglifyjs client/vue-element-loading.js -cm --comments -o client/vue-element-loading.min.js && rm client/vue-element-loading.js",
+    "build:lib": "rollup --environment NODE_ENV:production -c rollup.config.js",
     "build:example": "rm -rf ./dist && cross-env NODE_ENV=production webpack --mode production --progress --hide-modules",
     "prepublish": "npm run build:lib"
   },
