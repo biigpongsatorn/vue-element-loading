@@ -9,7 +9,7 @@
 
 # vue-element-loading
 
-⏳ Loading inside a container or full screen for Vue.js
+⏳ Loading inside a container or full screen for Vue.js SSR support
 
 # 👀 Document & Demo Page
 
@@ -53,6 +53,18 @@ or
 
 ```javascript
 import VueElementLoading from "vue-element-loading";
+
+export default {
+  components: {
+    VueElementLoading
+  }
+};
+```
+
+# 🕹 SSR Usage
+```javascript
+import VueElementLoading from "vue-element-loading/ssr";
+import "vue-element-loading/ssr/index.css";
 
 export default {
   components: {
