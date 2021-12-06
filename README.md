@@ -146,6 +146,7 @@ Use the `duration` parameter to set the animation loop duration in seconds (does
 | is-full-screen    | Boolean        | false        | Loader will overlay the full page |
 | text   | String    | -  | Text will appear below loader |
 | text-style | Object | {} | Change style of the text below loader |
+| transition-duration    | Number \| String        | 300        | The minimum appearing duration of transition in milliseconds |
 
 
 # 🤝 Contributing

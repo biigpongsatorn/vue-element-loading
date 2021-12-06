@@ -3,7 +3,7 @@
     <div
       v-show="isActive || isActiveDelay"
       :class="{ 'velmld-full-screen': isFullScreen }"
-      :style="{ backgroundColor }"
+      :style="{ backgroundColor, transition }"
       ref="velmld"
       class="velmld-overlay"
     >
@@ -71,6 +71,10 @@ export default {
     delay: {
       type: [String, Number],
       default: 0
+    },
+    transitionDuration: {
+      type: [String, Number],
+      default: 300
     }
   },
   data () {
@@ -98,6 +102,11 @@ export default {
         this.isActiveDelay = false  
       }, ms)
     }
+  },
+  computed: {
+    transition() {
+      return `opacity ${+this.transitionDuration}ms`
+    },
   },
   watch: {
     /**
@@ -130,7 +139,6 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
-  transition: opacity .3s;
 }
 .velmld-spinner {
   top: 50%;
